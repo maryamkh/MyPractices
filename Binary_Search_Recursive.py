@@ -15,11 +15,11 @@ class RecBinSearch:
 
         if number > list[mid]:  #search in the right half
             low = mid + 1
-            self.recursiveBinSearch(list, number, low, high)
+            return self.recursiveBinSearch(list, number, low, high)
 
         if number < list[mid]:  #search in the left half
             high = mid -1
-            self.recursiveBinSearch(list, number, low, high)
+            return self.recursiveBinSearch(list, number, low, high)
 
 
 
