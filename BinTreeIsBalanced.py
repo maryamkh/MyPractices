@@ -69,7 +69,7 @@ def rightTreeHeight(self, root):
 
 def main():
     print 'this is main'
-    input = int(raw_input("enter the root node value: "))
+    input = int(input("enter the root node value: "))
     root = Node(input)
     root.insert(20)
     root.insert(16)
