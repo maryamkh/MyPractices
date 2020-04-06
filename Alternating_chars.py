@@ -49,10 +49,10 @@ def del_frequency(pos, string):
     return deletion
 
 def main():
-    query_count = int(raw_input('enter number of queries: '))
+    query_count = int(input('enter number of queries: '))
     string_arr = []
     for i in range(query_count):
-        in_string = raw_input('enter the string: ')
+        in_string = input('enter the string: ')
         string_arr.append(in_string)
         
     result = alternating_char(string_arr)
