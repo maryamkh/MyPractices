@@ -18,8 +18,8 @@ def powerCalculation(number, power):
     print result
 
 def main():
-    number = int(raw_input('Enter a number...'))
-    power = int(raw_input('Enter power...'))
+    number = int(input('Enter a number...'))
+    power = int(input('Enter power...'))
     powerCalculation(number, power)
 
 if __name__ == '__main__':
