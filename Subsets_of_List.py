@@ -14,7 +14,7 @@ class SubsetFinder:
 
 
 def main():
-    input = raw_input('enter a lsi of integers:   ')
+    input = input('enter a lsi of integers:   ')
     
     intInput = map(int,input.split(' '))
     print intInput
