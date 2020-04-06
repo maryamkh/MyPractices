@@ -30,7 +30,7 @@ class findSubsets:
 
 
 def main():
-    list = raw_input('please enter a list of camma seperated integers:   ')
+    list = input('please enter a list of camma seperated integers:   ')
     intList = map(int, list.split(','))
     fSubsets = findSubsets()
     resultList = fSubsets.subsetSearch(intList)
