@@ -24,13 +24,13 @@ def compair_string_pair(tuple):
 
 
 def main():
-    tc_count = int(raw_input('enter the numebr of string pairs you want to check:   '))
+    tc_count = int(input('enter the numebr of string pairs you want to check:   '))
     string_pair = []
     all_pairs = list()
     
     for pair in range(tc_count):
-        string_pair.append(raw_input('please enter 1st string of the pair of strings to compair:   '))
-        string_pair.append(raw_input('please enter 2nd string of the pair of strings to compair:   '))
+        string_pair.append(input('please enter 1st string of the pair of strings to compair:   '))
+        string_pair.append(input('please enter 2nd string of the pair of strings to compair:   '))
         #print string_pair
         all_pairs.append(tuple(string_pair))
         del string_pair [:]
