@@ -25,8 +25,8 @@ class RecBinSearch:
 
 def main():
 
-    number = int(raw_input('Enter the number to search for...'))
-    list =raw_input('Enter the list of numbers to search within them: 1 3 5...')
+    number = int(input('Enter the number to search for...'))
+    list =input('Enter the list of numbers to search within them: 1 3 5...')
     intList = map(int, list.split(' '))
 
     low = 0
