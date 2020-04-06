@@ -47,11 +47,11 @@ class Solution:
 
 
 def main():
-    input = int(raw_input('enter a number to find its squere root: '))
+    inputNum = int(input('enter a number to find its squere root: '))
     
     sqroot = Solution()
-    result = sqroot.sqrt(input)
-    result1 = sqroot.sqrtBinarySearch(input)
+    result = sqroot.sqrt(inputNum)
+    result1 = sqroot.sqrtBinarySearch(inputNum)
     print result
     print result1
 
