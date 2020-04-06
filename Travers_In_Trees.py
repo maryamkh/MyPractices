@@ -84,7 +84,7 @@ class Node:
         return nodesList
 
 def main():
-    root_node = int(raw_input('please enter the root node: '))
+    root_node = int(input('please enter the root node: '))
     root = Node(root_node)
     root.insert(20)
     root.insert(16)
