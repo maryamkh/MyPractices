@@ -22,8 +22,8 @@ class IterativeBinSearch:
 
 def main():
 
-    number = int(raw_input('Please enter the number to search: '))
-    array = raw_input('Please enter the array of integers to search number within it in form of space seperated numbers   ')
+    number = int(input('Please enter the number to search: '))
+    array = input('Please enter the array of integers to search number within it in form of space seperated numbers   ')
 
     list = map(int,array.split(' '))
 
