@@ -1,0 +1,50 @@
+# Merge Sorted Array
+'''
+You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements
+in nums1 and nums2 respectively.
+
+Merge nums1 and nums2 into a single array sorted in non-decreasing order.
+
+The final sorted array should not be returned by the function, but instead be stored inside the array nums1.
+To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that should be merged,
+and the last n elements are set to 0 and should be ignored. nums2 has a length of n.
+'''
+#Solution: Use a binary search to find the position of each of members of nums2 in nums1
+#EXAMPLE: nums1 = [11, 12, 999, 1000] nums2=[10, 46, 50, 1002] 
+
+class Solution:
+    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+        """
+        Do not return anything, modify nums1 in-place instead.
+        """
+       
+        for i in range(len(nums2)):
+            first = 0
+            last = m + i
+           
+            pos = self.find_pos(first, last, nums2[i], nums1)
+            #if condition first>last becomes true in find_pos() method, the value returned maybe first = 0 or first = last+1 (which is first = m+i+1 > m+i)
+            #This means that the pos is bigger than length of nums1 (length in which has real values not zero) while we want our pos to be somewhere 
+            #between the 1st item of the lsit nums1 or the last item in it (last item before the zero items at the end of the list). Therefore we
+            #change the pose to be m+i
+            if pos > m+i:
+                pos = m+i
+            nums1[pos+1:m+i+1] = nums1[pos:m+i]
+            nums1[pos] = nums2[i]
+            
+    def find_pos(self, first, last, num2, nums1):
+        if first > last:  #when first>last either last = mid-1 = finally(-1), first = 0 or first = mid+1 = finally(last+1) ==> Therefore we return back the value of
+        #variable first 
+            return first
+        mid = (last -first)//2 + first
+        if nums1[mid] < num2:   # check the right side
+            first = mid + 1
+            return self.find_pos(first, last, num2, nums1)
+        
+        elif nums1[mid] > num2:   #check the left side
+            last = mid - 1
+            return self.find_pos(first, last, num2, nums1)
+        
+        else:   #two numbers are equal
+            return mid
+            
