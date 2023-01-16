@@ -17,6 +17,10 @@
 #-= 1. But since the question asks about max required rooms, we should always keep track of the max value of required rooms. There fore in each round that
 #we check that we calculate the number of required rooms for that momemnt (value of the variable rooms) we keep the max value in an other variable (result)
 #to not lose the max value or required rooms.
+#Time Complexity: O(NlogN) because all we are doing is sorting the two arrays for start timings and end timings individually and each of them would contain
+#N elements considering there are N intervals.
+
+#Space Complexity: O(N)because we create two separate arrays of size N, one for recording the start times and one for the end times.
 
 class Solution:
     #Store start times and end times in 2 different lists
