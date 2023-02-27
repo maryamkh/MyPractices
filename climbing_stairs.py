@@ -16,7 +16,7 @@ To reach step n, we have 2 ways:
 2- Stay on stair n-2 and take 2 steps to reach stair n.
 ======>number of ways to reach step n = number of ways to reach step n-1 + number of steps to reach step n-2.
 Time Complexity T(O) = O(n) ===> Since I usded "memoization" then each step is implemented only once and there is no redundent implementation.
-Space Complexity S(O) = O(n)
+Space Complexity S(O) = O(1)
 '''
 class Solution:
     #top(n) = top (n-1) + top(n-2)
