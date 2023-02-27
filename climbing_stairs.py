@@ -8,7 +8,10 @@
 #1. 1 step + 1 step + 1 step
 #2. 1 step + 2 steps
 #3. 2 steps + 1 step
-
+'''
+This problem is Dynamic programming problem. We cal look at this problem in a tree (like brute forth) starting from stair zero and then each time taking either 1 step or 2 steps until we reach the 
+final stair (stair n). ===> A Tree has a recursive solution and since some of the steps are redundent we can haveme morization. 
+'''
 class Solution:
     #top(n) = top (n-1) + top(n-2)
     def climbStairs(self, n: int) -> int:
